@@ -1,0 +1,164 @@
+/* !Import */
+@font-face {
+    font-family:'karlaR' ;
+    src: url(../fonts/Karla-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family:'karlaB';
+    src: url(../fonts/Karla-Bold.ttf);
+    font-weight: 700;
+}
+/* !Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* !Global Content */
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+body{
+    background-color: var(--Light-Gray);
+    font-size: 16px;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin: 2em 0;
+}
+img{
+    max-width: 100%;
+}
+h2{
+    color: var(--Light-Gray);
+    font-family:'karlaB'; 
+}
+/* !Body Content */
+/* ?==========Start-Main========== */
+main .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content:start;
+    border-radius:0.5em ;
+    overflow: hidden;
+    background-color:white;
+}
+/* ======Start-Community====== */
+.container .community{
+    background-color: white;
+    flex-grow: 1;
+    padding: 3em;
+}
+.container .community h1{
+    color: var(--Cyan);
+    font-family:'karlaB';
+    margin-bottom: 0.5em;
+}
+.container .community p{
+    font-family:'karlaR' ;
+    font-size:20px;
+    margin-bottom: 0.5em;
+}
+.container .community p:first-of-type{
+    color: var(--Bright-Yellow);
+}
+.container .community p:last-of-type{
+    color: var(--Grayish-Blue);
+}
+/* ======End-Community====== */
+/* ======Start-Monthly-Subscription====== */
+.container .subscription{
+    background-color: var(--Cyan);
+    flex: 1; 
+    padding: 2em;
+
+}
+.container .subscription h2{  
+
+}
+.container .subscription p:first-of-type{
+    color:white;
+    font-family:'karlaB';
+    font-size:40px;
+    padding-top: 0.5em;
+    padding-bottom: 0.3;
+}
+.container .subscription p:first-of-type span{
+    color:var(--Light-Gray);
+    font-family:'karlaR' ;
+    font-size:20px;
+}
+.container .subscription p:last-of-type{
+    color:var(--Light-Gray);
+    font-family:'karlaR' ;
+    font-size:20px;
+}
+.container .subscription button{
+    all: unset;
+    background-color: var(--Bright-Yellow);
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    border-radius:0.5em ;
+    margin-top: 2em;
+}
+.container .subscription button span{
+    color: white;
+}
+/* ======End-Monthly-Subscription====== */
+/* ======Start-Why-Us====== */
+.container .why-us{
+    background-color: hsla(179, 62%, 43%, 0.7);
+    flex: 1; 
+    padding: 2em 3em 3em 2em;
+}
+.container .why-us p{
+    color: var(--Light-Gray);
+    font-family:'karlaR' ;
+    width: 70%;
+    line-height: 1.6;
+    margin-top: 1em;
+}
+
+
+
+
+/* !Media Query */
+/* Mobile: 320px - 480px */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 350px;     
+}
+}
+
+/* Tablet: 768px - 1024px */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 750px; 
+    }
+}
+
+/* Desktop: 1200px - 1440px */
+@media only screen and (min-width:992 ) {
+    .container {
+        width: 970px; 
+    }
+}
+
+/* Large Desktop: 1600px and above */
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 800px;
+    }
+}
